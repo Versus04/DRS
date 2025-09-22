@@ -2,5 +2,6 @@
 struct driver{
    int id;
     std::string name;
-    int rating;
+    double rating;
+    double peakrating;
 };
