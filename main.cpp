@@ -66,9 +66,9 @@ int main()
         driver d;
         d.id=stoi(fields[0]);
         d.name = fields[4]+" "+fields[5];
-        d.rating = 1500;
+        d.rating = 1000;
         drivers[d.id]=d;
-        d.peakrating=1500;
+        d.peakrating=1000;
     }
     fin.close();
     fin.clear();
@@ -179,7 +179,7 @@ int main()
         for (auto &it : drivers) {
             if (!activeDrivers.count(it.first)) {
                 it.second.rating -= 20;
-                if (it.second.rating < 1500) it.second.rating = 1500; 
+                if (it.second.rating < 1000) it.second.rating = 1000; 
                 it.second.peakrating = max(it.second.peakrating,it.second.rating);
             }
         }
